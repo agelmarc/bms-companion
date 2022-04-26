@@ -1,0 +1,52 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "unicorn"],
+  "extends": ["plugin:@typescript-eslint/eslint-recommended", "prettier"],
+  "ignorePatterns": "dist/*",
+  "rules": {
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "no-type-imports"
+      }
+    ],
+    "import/no-duplicates": 1,
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          ["internal", "sibling", "index", "parent"],
+          "object"
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "unicorn/catch-error-name": 1,
+    "unicorn/consistent-destructuring": 1,
+    "unicorn/no-array-for-each": 2,
+    "unicorn/no-for-loop": 2,
+    "unicorn/no-instanceof-array": 2,
+    "unicorn/no-lonely-if": 1,
+    "no-lonely-if": 1,
+    "unicorn/no-object-as-default-parameter": 1,
+    "unicorn/no-unreadable-array-destructuring": 2,
+    "prefer-destructuring": [
+      "error",
+      {
+        "array": false,
+        "object": true
+      }
+    ],
+    "unicorn/no-useless-undefined": 1,
+    "unicorn/prefer-date-now": 2,
+    "unicorn/prefer-default-parameters": 1,
+    "unicorn/prefer-ternary": 2,
+    "unicorn/prefer-switch": 2,
+    "@next/next/no-img-element": 0
+  }
+}

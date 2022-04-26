@@ -1,0 +1,28 @@
+.popup {
+  width: max-content;
+}
+.waypointInner {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  width: max-content;
+  min-width: 200px;
+  max-width: 300px;
+  color: #888;
+}
+.name {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.1em;
+  color: var(--color-text-primary-dark);
+  margin-bottom: 0.125rem !important;
+}
+.subheading {
+  display: flex;
+  gap: 0.5rem;
+}
+.publisher {
+  font-size: var(--text-size-s);
+  text-align: right;
+  margin-top: 0.5rem !important;
+}

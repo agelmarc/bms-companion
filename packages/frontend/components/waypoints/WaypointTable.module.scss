@@ -1,0 +1,53 @@
+.table {
+  width: 100%;
+  margin-top: 3rem;
+  box-sizing: content-box;
+  td,
+  th {
+    padding: 0.5rem 1rem;
+    vertical-align: middle;
+  }
+  tbody tr {
+    border-top: 1px solid var(--color-bg-1);
+    transition: background-color var(--timing-snappy) ease;
+    &:hover {
+      background-color: var(--color-bg-2);
+      .del {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.name {
+  width: 33%;
+}
+
+.sichtbarkeit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+
+  & > * {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .jeder {
+  }
+  .ich {
+  }
+}
+
+.del {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  transition: opacity var(--timing-snappy) ease;
+  &.confirm {
+    color: var(--color-salmon);
+    opacity: 1;
+    pointer-events: auto;
+  }
+}

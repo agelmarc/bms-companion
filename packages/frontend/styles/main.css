@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./styles.css";
+@import "./popups.css";
+
+@layer base {
+  :root {
+    font-family: "Lato", sans-serif;
+  }
+}
+
+@layer utilities {
+  .skeleton {
+    @apply bg-gray-300 animate-pulse;
+  }
+}

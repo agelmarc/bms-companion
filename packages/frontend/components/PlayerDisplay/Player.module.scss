@@ -1,0 +1,48 @@
+.playerDisplay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+.ellipsis {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  span {
+    cursor: pointer;
+  }
+  span:hover .playerOverflow {
+    opacity: 1;
+    transform: translate(100%, -50%);
+  }
+}
+.playerOverflow {
+  position: absolute;
+  right: calc(var(--padding-leftright) * -1 - 1rem);
+  transform: translate(95%, -50%);
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: var(--color-bg-1);
+  width: 261px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--timing-smooth) ease,
+    transform var(--timing-smooth) ease;
+}
+.player {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  overflow: hidden;
+  user-select: none;
+}
+.avatar {
+  width: var(--text-size-m);
+  height: var(--text-size-m);
+  min-width: var(--text-size-m);
+  min-height: var(--text-size-m);
+}

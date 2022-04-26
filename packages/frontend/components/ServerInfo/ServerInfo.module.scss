@@ -1,0 +1,63 @@
+.ipWrapper {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ip {
+  font-size: var(--text-size-m);
+  font-weight: 700;
+  transition: color var(--timing-snappy) ease;
+  cursor: pointer;
+  user-select: none;
+
+  &:hover {
+    color: var(--color-text-standout);
+  }
+}
+
+.copied {
+  font-size: var(--text-size-s);
+  color: var(--color-green);
+  border-color: var(--color-green);
+  opacity: 0;
+  transition: opacity var(--timing-smooth) ease;
+  pointer-events: none;
+  user-select: none;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.reachable {
+  &.online {
+    --color: var(--color-green);
+  }
+
+  &.offline {
+    --color: var(--color-salmon);
+  }
+
+  color: var(--color);
+  text-transform: capitalize;
+  user-select: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(-44%);
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 9999px;
+    margin-right: 0.25rem;
+    background-color: var(--color);
+  }
+}
+
+.infoWrapper {
+  font-size: 0.75rem;
+  line-height: 1em;
+}

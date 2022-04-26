@@ -1,0 +1,29 @@
+.leaflet-popup-content-wrapper {
+  border-radius: 0px;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  width: unset !important;
+}
+
+.leaflet-popup-content p {
+  margin: 0;
+}
+
+.leaflet-popup-close-button {
+}
+
+.leaflet-popup {
+  @apply drop-shadow-lg;
+}
+
+.leaflet-marker-icon {
+  @apply h-auto drop-shadow-2xl;
+}
+
+.leaflet-create-waypoint-link {
+  display: block;
+  width: max-content;
+  margin: 0.5rem 1.5rem;
+}

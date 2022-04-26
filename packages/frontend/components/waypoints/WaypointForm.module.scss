@@ -1,0 +1,32 @@
+.form {
+  width: 100%;
+  min-width: max-content;
+  padding: 1rem;
+  margin-top: 3rem;
+  background-color: var(--color-bg-1);
+
+  display: none;
+}
+
+.visible {
+  display: block !important;
+}
+
+.grid {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 33% auto auto 4rem 4rem 4rem;
+  grid-template-rows: auto auto;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+}
+
+.bottomrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+  margin-top: 1rem;
+}

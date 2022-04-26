@@ -1,0 +1,58 @@
+.sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding-top: 2rem;
+  background-color: var(--color-bg-1);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 10;
+
+  --padding: 0 var(--padding-leftright);
+  --padding-leftright: 2rem;
+
+  & > * {
+    padding: var(--padding);
+  }
+}
+.title {
+  font-size: var(--text-size-xxl);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1em;
+  align-self: flex-start;
+  padding: 0;
+  margin: var(--padding);
+}
+.subheading {
+  font-weight: 700;
+  font-size: var(--text-size-xs);
+  margin-bottom: 0.5rem;
+}
+.mainnav {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-2);
+  padding: var(--padding);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.navlink {
+  padding: 0.5rem 0;
+  font-size: var(--text-size-mainnav);
+  font-weight: 400;
+  transition: color var(--timing-smooth);
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: var(--color-linkhover);
+  }
+}
+.profile {
+  margin-top: auto;
+  background-color: var(--color-bg-2);
+}
